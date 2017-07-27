@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Mac & i – Heft 5/2017-->
         <scene sceneID="bhl-iB-5Ai">
             <objects>
                 <tableViewController id="ouL-Uw-WIt" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="Beispiele zu Vision &amp; CoreML" footerTitle="Mac &amp; i Heft 5/2015" id="Hkv-4t-BkB">
+                            <tableViewSection headerTitle="Beispiele zu Vision &amp; CoreML" id="Hkv-4t-BkB">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="x6e-3g-Laa">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -129,7 +129,7 @@
                             <outlet property="delegate" destination="ouL-Uw-WIt" id="if2-JD-7Q2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="byh-YE-4HP"/>
+                    <navigationItem key="navigationItem" title="Mac &amp; i – Heft 5/2017" id="byh-YE-4HP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V80-7h-kVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
