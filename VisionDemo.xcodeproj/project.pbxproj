@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		0233555D1F2A46CF0012D2F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233555C1F2A46CF0012D2F5 /* AppDelegate.swift */; };
-		0233555F1F2A46CF0012D2F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233555E1F2A46CF0012D2F5 /* ViewController.swift */; };
+		0233555F1F2A46CF0012D2F5 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233555E1F2A46CF0012D2F5 /* TrackingViewController.swift */; };
 		023355621F2A46CF0012D2F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023355601F2A46CF0012D2F5 /* Main.storyboard */; };
 		023355641F2A46CF0012D2F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023355631F2A46CF0012D2F5 /* Assets.xcassets */; };
 		023355671F2A46CF0012D2F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023355651F2A46CF0012D2F5 /* LaunchScreen.storyboard */; };
+		0233556F1F2A4F090012D2F5 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233556E1F2A4F090012D2F5 /* FaceViewController.swift */; };
+		023355711F2A4F160012D2F5 /* LandmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023355701F2A4F160012D2F5 /* LandmarksViewController.swift */; };
+		023355731F2A4F2E0012D2F5 /* RectanglesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023355721F2A4F2E0012D2F5 /* RectanglesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		023355591F2A46CF0012D2F5 /* VisionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0233555C1F2A46CF0012D2F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0233555E1F2A46CF0012D2F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0233555E1F2A46CF0012D2F5 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
 		023355611F2A46CF0012D2F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		023355631F2A46CF0012D2F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		023355661F2A46CF0012D2F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		023355681F2A46CF0012D2F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0233556E1F2A4F090012D2F5 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
+		023355701F2A4F160012D2F5 /* LandmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksViewController.swift; sourceTree = "<group>"; };
+		023355721F2A4F2E0012D2F5 /* RectanglesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectanglesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				0233555C1F2A46CF0012D2F5 /* AppDelegate.swift */,
-				0233555E1F2A46CF0012D2F5 /* ViewController.swift */,
 				023355601F2A46CF0012D2F5 /* Main.storyboard */,
+				023355721F2A4F2E0012D2F5 /* RectanglesViewController.swift */,
+				0233556E1F2A4F090012D2F5 /* FaceViewController.swift */,
+				023355701F2A4F160012D2F5 /* LandmarksViewController.swift */,
+				0233555E1F2A46CF0012D2F5 /* TrackingViewController.swift */,
 				023355631F2A46CF0012D2F5 /* Assets.xcassets */,
 				023355651F2A46CF0012D2F5 /* LaunchScreen.storyboard */,
 				023355681F2A46CF0012D2F5 /* Info.plist */,
@@ -135,7 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0233555F1F2A46CF0012D2F5 /* ViewController.swift in Sources */,
+				023355711F2A4F160012D2F5 /* LandmarksViewController.swift in Sources */,
+				0233556F1F2A4F090012D2F5 /* FaceViewController.swift in Sources */,
+				0233555F1F2A46CF0012D2F5 /* TrackingViewController.swift in Sources */,
+				023355731F2A4F2E0012D2F5 /* RectanglesViewController.swift in Sources */,
 				0233555D1F2A46CF0012D2F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +328,7 @@
 				0233556D1F2A46CF0012D2F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-class ViewController: UIViewController {
+class TrackingViewController: UIViewController {
 
 	@IBOutlet weak var livePreView: UIView!
 	@IBOutlet weak var selectionView: UIView!
@@ -23,6 +23,12 @@ class ViewController: UIViewController {
 		super.viewDidAppear(animated)
 		setupVideoPreview(withView: livePreView)
 	}
+
+	
+
+
+
+
 
 	//******************************************************************************************************************
 	//* MARK: - Videofeed von der Kamera
