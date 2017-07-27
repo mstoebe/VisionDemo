@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Ohne Zugriff auf die Kamera kann die App keinen Video-Stream erzeugen.</string>
 </dict>
 </plist>
