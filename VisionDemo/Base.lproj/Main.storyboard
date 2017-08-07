@@ -93,7 +93,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OyR-7c-rV6" kind="show" action="showDetailViewController:sender:" id="4P5-31-GMs"/>
+                                            <segue destination="OyR-7c-rV6" kind="show" id="1QX-oR-BcX"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yuz-Fn-8a4">
@@ -171,9 +171,23 @@
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="VyW-Nc-yiY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ZN-XU-D9I">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sT8-2r-NyQ" firstAttribute="bottom" secondItem="0ZN-XU-D9I" secondAttribute="bottom" id="6XS-IC-uCH"/>
+                            <constraint firstItem="sT8-2r-NyQ" firstAttribute="trailing" secondItem="0ZN-XU-D9I" secondAttribute="trailing" id="HNM-fY-LrT"/>
+                            <constraint firstItem="0ZN-XU-D9I" firstAttribute="leading" secondItem="sT8-2r-NyQ" secondAttribute="leading" id="LH4-hh-Fxj"/>
+                            <constraint firstItem="0ZN-XU-D9I" firstAttribute="top" secondItem="VyW-Nc-yiY" secondAttribute="top" id="oNw-Ob-dDX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sT8-2r-NyQ"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="0ZN-XU-D9I" id="4IX-fg-Lmm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gn-hf-Qld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,12 +202,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bat-nC-NHG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Bat-nC-NHG" firstAttribute="top" secondItem="H20-tT-zI8" secondAttribute="top" id="WJI-kW-3bs"/>
+                            <constraint firstItem="Bat-nC-NHG" firstAttribute="top" secondItem="rbM-G3-iVz" secondAttribute="top" id="WJI-kW-3bs"/>
                             <constraint firstItem="Bat-nC-NHG" firstAttribute="leading" secondItem="H20-tT-zI8" secondAttribute="leading" id="YV7-3d-6cP"/>
                             <constraint firstItem="Bat-nC-NHG" firstAttribute="trailing" secondItem="H20-tT-zI8" secondAttribute="trailing" id="ZFg-d6-sCi"/>
                             <constraint firstItem="Bat-nC-NHG" firstAttribute="bottom" secondItem="H20-tT-zI8" secondAttribute="bottom" id="nau-uN-dZh"/>
