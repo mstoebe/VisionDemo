@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cbh-Jz-yWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-357" y="822"/>
+            <point key="canvasLocation" x="-673" y="819"/>
         </scene>
         <!--Face View Controller-->
         <scene sceneID="XFo-KR-caA">
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gn-hf-Qld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="822"/>
+            <point key="canvasLocation" x="9" y="821"/>
         </scene>
         <!--Landmarks View Controller-->
         <scene sceneID="8yc-La-0qk">
@@ -172,13 +172,27 @@
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="rbM-G3-iVz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bat-nC-NHG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bat-nC-NHG" firstAttribute="top" secondItem="H20-tT-zI8" secondAttribute="top" id="WJI-kW-3bs"/>
+                            <constraint firstItem="Bat-nC-NHG" firstAttribute="leading" secondItem="H20-tT-zI8" secondAttribute="leading" id="YV7-3d-6cP"/>
+                            <constraint firstItem="Bat-nC-NHG" firstAttribute="trailing" secondItem="H20-tT-zI8" secondAttribute="trailing" id="ZFg-d6-sCi"/>
+                            <constraint firstItem="Bat-nC-NHG" firstAttribute="bottom" secondItem="H20-tT-zI8" secondAttribute="bottom" id="nau-uN-dZh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="H20-tT-zI8"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Bat-nC-NHG" id="QiY-h0-c8K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvK-1x-0HY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="562" y="820"/>
+            <point key="canvasLocation" x="704.79999999999995" y="820.83958020989508"/>
         </scene>
         <!--Tracking View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -188,35 +202,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzJ-XW-bwr" userLabel="livePreview">
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEz-FL-bXb" userLabel="preView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYe-O2-IPl" userLabel="selection">
-                                        <rect key="frame" x="67" y="259" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tf1-i6-gie" appends="YES" id="fpn-Jv-0wZ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AoN-rP-zID" userLabel="selection">
+                                <rect key="frame" x="67" y="390" width="74" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.066860225960000005" green="0.77775278140000004" blue="0.4462616103" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fzJ-XW-bwr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bip-kH-DJn"/>
-                            <constraint firstItem="fzJ-XW-bwr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CoL-9m-5qx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fzJ-XW-bwr" secondAttribute="trailing" id="j3E-b6-ETA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fzJ-XW-bwr" secondAttribute="bottom" id="kr7-eU-Lg4"/>
+                            <constraint firstItem="KEz-FL-bXb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AEb-0e-PuB"/>
+                            <constraint firstItem="KEz-FL-bXb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Pm8-XF-zGO"/>
+                            <constraint firstItem="KEz-FL-bXb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k2E-pb-e2u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KEz-FL-bXb" secondAttribute="bottom" id="lpF-FZ-aEv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KEz-FL-bXb" secondAttribute="trailing" id="ydr-YB-AhI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="livePreView" destination="fzJ-XW-bwr" id="QtP-Ka-4aE"/>
-                        <outlet property="selectionView" destination="gYe-O2-IPl" id="v6w-HK-CTp"/>
+                        <outlet property="livePreView" destination="KEz-FL-bXb" id="nlo-aP-NbL"/>
+                        <outlet property="selectionView" destination="AoN-rP-zID" id="2B1-sL-PvQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tf1-i6-gie">
+                    <connections>
+                        <action selector="userTapped:" destination="BYZ-38-t0r" id="fgM-is-biH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1004" y="820"/>
+            <point key="canvasLocation" x="1401" y="821"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CBh-pN-isk">
@@ -234,7 +255,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsM-KL-7vp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-125" y="-144"/>
+            <point key="canvasLocation" x="-503" y="-143"/>
         </scene>
     </scenes>
 </document>
