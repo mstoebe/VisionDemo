@@ -23,7 +23,7 @@ class RectanglesViewController: UIViewController {
 			print ("error while loading and converting image")
 			return
 		}
-		
+
 		imageView.image = image
 		
 		//Requesthandler anlegen

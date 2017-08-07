@@ -19,6 +19,11 @@ class LandmarksViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		imageView.image = image
+
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
 		findLandmarks(in: image)
 	}
 	
@@ -59,7 +64,6 @@ class LandmarksViewController: UIViewController {
 						//calc bounding box for face, again
 						let boundingBox     = face.boundingBox
 						let scaledImageRect = AVMakeRect(aspectRatio: self.image!.size, insideRect: self.view.frame)
-						self.imageView.frame = scaledImageRect
 						
 						let size = CGSize(width:  boundingBox.width  * scaledImageRect.size.width,
 						                  height: boundingBox.height * scaledImageRect.size.height)

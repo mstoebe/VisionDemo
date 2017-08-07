@@ -118,7 +118,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" action="showDetailViewController:sender:" id="C8k-U3-XEf"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="He9-8O-Xc7"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
