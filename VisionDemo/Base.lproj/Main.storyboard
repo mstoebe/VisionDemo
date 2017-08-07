@@ -142,9 +142,23 @@
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="lRU-yH-8Oe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UOB-w3-nWg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gpc-8l-G56" firstAttribute="bottom" secondItem="UOB-w3-nWg" secondAttribute="bottom" id="DXv-ml-f5u"/>
+                            <constraint firstItem="UOB-w3-nWg" firstAttribute="top" secondItem="lRU-yH-8Oe" secondAttribute="top" id="FJ9-X5-BeH"/>
+                            <constraint firstItem="UOB-w3-nWg" firstAttribute="leading" secondItem="gpc-8l-G56" secondAttribute="leading" id="MB0-AQ-7cJ"/>
+                            <constraint firstItem="gpc-8l-G56" firstAttribute="trailing" secondItem="UOB-w3-nWg" secondAttribute="trailing" id="Vt8-TI-08g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gpc-8l-G56"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="UOB-w3-nWg" id="cpW-kw-knv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cbh-Jz-yWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
