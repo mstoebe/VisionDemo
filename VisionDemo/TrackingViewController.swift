@@ -31,7 +31,7 @@ class TrackingViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 		super.viewDidAppear(animated)
 
 		//Video-Stream einrichten
-		setupVideoPreview(withView: livePreView)
+		setupVideoPreviewWith(view: livePreView)
 
 		//Auswahl zu Beginn ausblenden, Frame wird später durch den Tap-Delegate neu gesetzt
 		selectionView.frame = .zero
@@ -43,7 +43,7 @@ class TrackingViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 	private let liveSession = AVCaptureSession()
 	private var cameraPreviewLayer : AVCaptureVideoPreviewLayer?
 
-	public func setupVideoPreview (withView : UIView) {
+	public func setupVideoPreviewWith(view : UIView) {
 		//AVCaptureSession einrichten und Kamera als Quelle wählen
 		self.liveSession.sessionPreset = AVCaptureSession.Preset.photo
 		if let  cam   = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back),
@@ -53,10 +53,10 @@ class TrackingViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 
 		//Preview-Layer erzeugen und an die View im UI hängen
 		self.cameraPreviewLayer = AVCaptureVideoPreviewLayer(session:liveSession)
-		self.cameraPreviewLayer!.frame = withView.bounds
+		self.cameraPreviewLayer!.frame = view.bounds
 		self.cameraPreviewLayer!.videoGravity = .resize
 		self.cameraPreviewLayer!.connection?.videoOrientation = .landscapeRight
-		withView.layer.addSublayer(self.cameraPreviewLayer!)
+		view.layer.addSublayer(self.cameraPreviewLayer!)
 
 		//Video-Stream starten
 		self.liveSession.startRunning()
@@ -82,13 +82,11 @@ class TrackingViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 			return
 		}
 
-		// create the request
+		// request erzeugen
 		let request = VNTrackObjectRequest(detectedObjectObservation: lastObservation, completionHandler: self.objectTrackingDidFinish)
-		// set the accuracy to high
-		// this is slower, but it works a lot better
 		request.trackingLevel = .accurate
 
-		// perform the request
+		// …und ausführen
 		do {
 			try self.sequenceRequestHandler.perform([request], on: pixelBuffer)
 		} catch {
