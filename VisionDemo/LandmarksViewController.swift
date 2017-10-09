@@ -80,8 +80,8 @@ class LandmarksViewController: UIViewController {
 						//Nasenpunkte konvertieren
 						var pointsForThisNose = [CGPoint]()
 						
-						for i in 0...nose.pointCount {
-							let point    = nose.point(at: i)
+						for i in 0..<nose.pointCount {
+							let point    = nose.normalizedPoints[i]
 							let newPoint = CGPoint(x: origin.x + (     CGFloat(point.x)  * size.width),
 							                       y: origin.y + ((1 - CGFloat(point.y)) * size.height))
 							pointsForThisNose.append(newPoint)
